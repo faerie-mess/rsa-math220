@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Encryptor/Decryptor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <h2>RSA Encryptor/Decryptor</h2>
+
+    <div class="container">
+        <section>
+            <h3>Key Generation</h3>
+            <button class="btn btn-outline-secondary" onclick="generateKeys()">Generate Keys</button>
+            <div id="keys" class="mb-3">
+                <p id="public-key"></p>
+                <p id="private-key"></p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Encryption</h3>
+            <div class="mb-3">
+                <label for="to-encrypt" class="form-label">Enter <b>plaintext</b></label>
+                <input type="text" class="form-control" id="to-encrypt" placeholder="Enter plaintext">
+            </div>
+            <button class="btn btn-outline-dark" onclick="encryptMessage()">Encrypt</button>
+            <div class="mb-3">
+                <label for="encrypted" class="form-label">Encrypted Message</label>
+                <textarea class="form-control" id="encrypted" rows="3" readonly></textarea>
+            </div>
+        </section>
+
+        <section>
+            <h3>Decryption</h3>
+            <div class="mb-3">
+                <label for="to-decrypt" class="form-label">Enter <b>encrypted message</b></label>
+                <input type="text" class="form-control" id="to-decrypt" placeholder="Enter encrypted message">
+            </div>
+            <button class="btn btn-outline-dark" onclick="decryptMessage()">Decrypt</button>
+            <div class="mb-3">
+                <label for="decrypted" class="form-label">Plaintext</label>
+                <textarea class="form-control" id="decrypted" rows="3" readonly></textarea>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
